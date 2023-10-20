@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-
+import { FirstApp } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { PostModule } from './components/post/post.module';
+// import { PostlistComponent } from './components/postlist/postlist.component';
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [FirstApp, NavbarComponent],
+  imports: [BrowserModule, AppRoutingModule, PostModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [FirstApp],
 })
-export class AppModule { }
+export class AppModule {}
